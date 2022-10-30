@@ -22,3 +22,27 @@ button {
 a {
 	text-decoration: none;
 }
+li{
+	list-style: none;
+}
+
+// navigation
+
+.nav{
+	position: relative;
+	height: 6rem;
+	background-color: $main-color;
+	color: $light-gray-e;
+	&__mobile{
+		position: fixed;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 6rem;
+		width: 100%;
+	}
+	&__sidebar{
+		position: fixed;
+		display: none;
+	}
+}

@@ -13,12 +13,37 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="./dist/css/main.min.css" />
-
     <script src="https://kit.fontawesome.com/8019d8951d.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="./dist/css/main.min.css" />
 </head>
 
 <body>
+    <nav class="nav">
+        <div class="nav__mobile">
+            <div class="nav__burger-icons">
+                <button class="nav__bars"><i class="fas fa-bars"></i></button>
+                <button class="nav__arrow hide"><i class="fas fa-arrow-left"></i></button>
+            </div>
+            <div class="nav__sidebar">
+                <h2 class="nav__sidebar-heading">FilmTV</h2>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#">How FilmTV works</a></li>
+                    <li class="nav__item"><a href="#">What's on</a></li>
+                    <li class="nav__item"><a href="#">TV Membership <button class="nav__chevron"><i class="fas fa-chevron-down"></i></button></a></li>
+                    <li class="nav__item"><a href="#">Broadband</a></li>
+                    <li class="nav__item"><a href="#">Sports</a></li>
+                </ul>
+                <button class="nav__sidebar-btn">Join FilmTV</button>
+            </div>
+            <h1 class="nav__heading">FilmTV</h1>
+            <div class="nav__account-icons">
+                <button class="nav__help"><i class="fas fa-question-circle"></i></button>
+                <button class="nav__user"><i class="fas fa-user"></i></button>
+            </div>
+        </div>
+    </nav>
+    
 
 
     <script src="./dist/js/main.min.js"></script>
