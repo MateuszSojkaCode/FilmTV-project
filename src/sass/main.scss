@@ -36,13 +36,88 @@ li{
 	&__mobile{
 		position: fixed;
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		height: 6rem;
 		width: 100%;
 	}
 	&__sidebar{
 		position: fixed;
-		display: none;
+		top: 0;
+		left: 0;
+		width: 30rem;
+		height: 100vh;
+		padding: 3rem;
+		background-color: $dark-color-1;
+		// transform: translateX(-100%);
+		transition: transform .3s;
 	}
+	&__sidebar-heading{
+		text-align: center;
+		font-size: 3.6rem;
+	}
+	&__item{
+		display: block;
+		position: relative;
+		margin: .5rem 0;
+		padding: 1rem 0;
+		color: $light-gray-e;
+		&--membership{
+			margin: 0 auto;
+			width: 90%;
+			background-color: $light-color-1;
+		}
+		&--membership-item{
+			margin: .5rem;
+			padding: .5rem 0;
+		}
+	}
+	&__chevron{
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 1rem;
+		font-size: 2.4rem;
+		color: currentColor;
+		background: none;
+		border: none;
+	}
+	&__sidebar-btn{
+		display: block;
+		height: 4rem;
+		width: 90%;
+		margin: 0 auto;
+		font-size: 1.8rem;
+		color: $light-gray-e;
+		background-color: $main-cta;
+		border: none;
+		border-radius: 8px;
+		text-transform: uppercase;
+	}
+	&__burger-icons, &__account-icons{
+		position: absolute;
+		display: flex;
+	}
+	&__burger-icons{		
+		transition: transform .3s;
+		left: 1rem;
+	}
+	&__account-icons{
+		right: 3rem;
+	}
+	&__bars, &__arrow, &__help, &__user{
+		padding: 1rem;
+		font-size: 2.4rem;
+		color: $light-gray-e;
+		background: none;
+	}
+}
+.hide{
+	display: none;
+}
+.move-sidebar{
+	transform: translateX(0);
+}
+.move-icons{
+	transform: translateX(30rem);
 }
