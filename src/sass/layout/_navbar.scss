@@ -1,4 +1,5 @@
 @use '../abstracts/' as * ;
+@use '../typography/' as * ;
 
 .nav{
 	position: relative;
@@ -26,7 +27,7 @@
 	}
 	&__sidebar-heading{
 		text-align: center;
-		font-size: 3.6rem;
+		font-size: $fontSize-36;
 	}
 	&__item{
 		display: block;
@@ -49,7 +50,7 @@
 		top: 0;
 		right: 0;
 		padding: 1rem;
-		font-size: 2.4rem;
+		font-size: $fontSize-24;
 		color: currentColor;
 		background: none;
 		border: none;
@@ -59,7 +60,7 @@
 		height: 4rem;
 		width: 90%;
 		margin: 0 auto;
-		font-size: 1.8rem;
+		font-size: $fontSize-18;
 		color: $light-gray-e;
 		background-color: $main-cta;
 		border: none;
@@ -79,7 +80,7 @@
 	}
 	&__bars, &__arrow, &__help, &__user{
 		padding: 1rem;
-		font-size: 2.4rem;
+		font-size: $fontSize-24;
 		color: $light-gray-e;
 		background: none;
 	}
