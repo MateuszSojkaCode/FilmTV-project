@@ -1,0 +1,26 @@
+@use './colors' as *;
+
+.sidebar-link-animation{
+    position: relative;
+    transition: color .3s, padding .3s;
+    z-index: 5;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        background-color: $main-cta;       
+        transition: width .3s;
+    }
+    &:hover{
+        color: $light-color-1;
+        font-weight: bold;
+        padding-left: 1rem;
+    }
+    &:hover::after{        
+        width: 100%;
+        z-index: -1;
+    }
+}

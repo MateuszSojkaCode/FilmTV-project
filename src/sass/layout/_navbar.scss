@@ -1,5 +1,5 @@
 @use '../abstracts/' as * ;
-@use '../typography/' as * ;
+@use '../base/' as * ;
 
 .nav{
 	position: relative;
@@ -18,12 +18,13 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		width: 30rem;
+		width: 100%;
 		height: 100vh;
 		padding: 3rem;
-		background-color: $dark-color-1;
-		transform: translateX(-100%);
+		background-color: $dark-color-2;
+		// transform: translateX(-100%);
 		transition: transform .3s;
+        z-index: 50;
 	}
 	&__sidebar-heading{
 		text-align: center;
@@ -74,6 +75,7 @@
 	&__burger-icons{		
 		transition: transform .3s;
 		left: 1rem;
+        z-index: 100;
 	}
 	&__account-icons{
 		right: 3rem;
@@ -92,5 +94,16 @@
 	transform: translateX(0);
 }
 .move-icons{
-	transform: translateX(30rem);
+	transform: translateX(80vw);
+}
+
+@media(min-width: 400px){
+    .nav{
+        &__sidebar{
+            width: 30rem;
+        }
+    }
+    .move-icons{
+        transform: translateX(30rem);
+    }
 }
