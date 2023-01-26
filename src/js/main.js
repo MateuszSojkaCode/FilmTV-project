@@ -5,6 +5,9 @@ const iconBox = document.querySelector('.nav__burger-icons')
 const accountBox = document.querySelector('.nav__account-icons')
 const navHeading = document.querySelector('.nav__heading')
 
+const membershipList = document.querySelector('.nav__item--membership')
+const chevronIcon = document.querySelector('.nav__chevron')
+
 const showNav = () => {
     barsIco.classList.toggle('hide')
     arrowIco.classList.toggle('hide')
@@ -20,5 +23,17 @@ const showNav = () => {
     }     
 }
 
+const showMembershipList = () => {
+    membershipList.classList.toggle('hide')
+    // membershipList.classList.toggle('move-membership-link')
+
+    if (!membershipList.classList.contains('hide')){
+        chevronIcon.style.transform = 'rotate(180deg)'
+    } else {
+        chevronIcon.style.transform = 'rotate(0deg)'
+    }
+}
+
 barsIco.addEventListener('click', showNav)
 arrowIco.addEventListener('click', showNav)
+chevronIcon.addEventListener('click', showMembershipList)
