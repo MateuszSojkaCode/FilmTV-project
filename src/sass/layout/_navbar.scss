@@ -3,7 +3,7 @@
 
 .nav {
 	position: relative;
-	height: 6rem;
+	height: 4rem;
 	background-color: $main-color;
 	color: $light-gray-e;
 	&__desktop {
@@ -14,7 +14,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 6rem;
+		height: 4rem;
 		width: 100%;
 	}
 	&__sidebar {
@@ -23,58 +23,58 @@
 		left: 0;
 		width: 100%;
 		height: 100vh;
-		padding: 3rem;
-		background-color: $dark-color-2;
+		padding: 1.5rem;
+		background-color: $dark-color-1;
 		transform: translateX(-100%);
 		transition: transform 0.3s;
 		z-index: 50;
 	}
 	&__sidebar-heading {
 		text-align: center;
-		font-size: $fontSize-36;
+		font-size: $font-size-36;
 	}
 	&__item {
 		display: block;
-		position: relative;
-		margin: 0.5rem 0;
+		position: relative;		
 		padding: 1rem 0;
 		color: $light-gray-e;
-		overflow: hidden;
+		overflow: hidden;		
 		&--membership {
 			margin-inline: auto;
-			padding: 0.5rem;
-			// transform: translateY(-100%);
-			// opacity: 0;
-			// transition: transform .3s, opacity .3s;
+			padding-block: 0.5rem;
+			background-color: $light-cta-1;			
 		}
 		&--membership-item {
 			display: block;
-			margin: 0.5rem 0;
 			padding: 0.5rem;
 			color: inherit;
 		}
 	}
 	&__chevron {
 		position: absolute;
-		top: 0;
+		top: .3rem;
 		right: 0;
-		padding: 1rem;
-		font-size: $fontSize-24;
+		padding: .5rem;
+		font-size: $font-size-24;
 		color: currentColor;
 		background: none;
 		border: none;
 	}
 	&__sidebar-btn {
 		display: block;
-		height: 4rem;
-		width: 90%;
-		margin: 2rem auto 0;
-		font-size: $fontSize-18;
+		width: 95%;
+		padding: 1rem;
+		margin-top: .5rem;
+		margin-inline: auto;
+		font-size: $font-size-20;
 		color: $light-gray-e;
 		background-color: $main-cta;
 		border: none;
 		border-radius: 8px;
-		text-transform: uppercase;
+		transition: background-color .3s;
+		&:hover{
+			background-color: $dark-cta-1;
+		}
 	}
 	&__burger-icons,
 	&__account-icons {
@@ -83,18 +83,18 @@
 	}
 	&__burger-icons {
 		transition: transform 0.3s;
-		left: 1rem;
+		left: .5rem;
 		z-index: 100;
 	}
 	&__account-icons {
-		right: 3rem;
+		right: .5rem;
 	}
 	&__bars,
 	&__arrow,
 	&__help,
 	&__user {
-		padding: 1rem;
-		font-size: $fontSize-24;
+		padding: .3rem;
+		font-size: $font-size-24;
 		color: $light-gray-e;
 		background: none;
 	}
@@ -108,24 +108,19 @@
 .move-icons {
 	transform: translateX(80vw);
 }
-// .move-membership-link{
-//     transform: translateY(0);
-//     opacity: 1;
-//    position: relative;
-// }
 
-@media (min-width: 400px) {
+@media (min-width: 25em) {
 	.nav {
 		&__sidebar {
-			width: 30rem;
+			width: 22rem;
 		}
 	}
 	.move-icons {
-		transform: translateX(30rem);
+		transform: translateX(22rem);
 	}
 }
 
-@media (min-width: 786px) {
+@media (min-width: 48em) {
 	.nav {
 		&__mobile {
 			display: none;
@@ -134,7 +129,7 @@
 			display: block;
 		}
 		&__heading {
-			font-size: $fontSize-36;
+			font-size: $font-size-36;
 			text-align: center;
 		}
 		&__top-bar {
@@ -142,14 +137,14 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			height: 6rem;
+			height: 4rem;
 		}
 		&__account-links {
 			position: absolute;
-			right: 3rem;
+			right: 2rem;
 		}
 		&__link {
-			font-size: $fontSize-16;
+			font-size: $font-size-16;
 			font-weight: bold;
 		}
 		&__bottom-bar {
@@ -162,17 +157,18 @@
 			padding: 0.5rem;
 		}
 		&__item {
-			padding: 1rem 2rem;
+			padding: .5rem 1rem;
 		}
 		&__chevron {
 			position: relative;
 			padding: 0;
-			right: -1rem;
-			font-size: $fontSize-16;
+			right: -.5rem;
+			top: .1rem;
+			font-size: $font-size-16;
 		}
 		&__desktop-btn {
-			padding: 1rem 2rem;
-			font-size: $fontSize-16;
+			padding: .6rem 1.2rem;
+			font-size: $font-size-16;
 			color: $light-gray-e;
 			background-color: $main-cta;
 			border: none;

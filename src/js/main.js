@@ -7,6 +7,7 @@ const navHeading = document.querySelector('.nav__heading')
 
 const membershipList = document.querySelector('.nav__item--membership')
 const chevronIcon = document.querySelector('.nav__chevron')
+const sidebarList = document.querySelector('.nav__item--list')
 
 const showNav = () => {
     barsIco.classList.toggle('hide')
@@ -25,10 +26,9 @@ const showNav = () => {
 
 const showMembershipList = () => {
     membershipList.classList.toggle('hide')
-    // membershipList.classList.toggle('move-membership-link')
 
     if (!membershipList.classList.contains('hide')){
-        chevronIcon.style.transform = 'rotate(180deg)'
+        chevronIcon.style.transform = 'rotate(180deg) translateY(.2rem)'
     } else {
         chevronIcon.style.transform = 'rotate(0deg)'
     }
@@ -36,4 +36,4 @@ const showMembershipList = () => {
 
 barsIco.addEventListener('click', showNav)
 arrowIco.addEventListener('click', showNav)
-chevronIcon.addEventListener('click', showMembershipList)
+sidebarList.addEventListener('click', showMembershipList)
