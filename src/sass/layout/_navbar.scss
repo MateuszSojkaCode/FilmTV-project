@@ -35,14 +35,14 @@
 	}
 	&__item {
 		display: block;
-		position: relative;		
+		position: relative;
 		padding: 1rem 0;
 		color: $light-gray-e;
-		overflow: hidden;		
+		overflow: hidden;
 		&--membership {
 			margin-inline: auto;
 			padding-block: 0.5rem;
-			background-color: $light-cta-1;			
+			background-color: $light-cta-1;
 		}
 		&--membership-item {
 			display: block;
@@ -52,9 +52,9 @@
 	}
 	&__chevron {
 		position: absolute;
-		top: .3rem;
+		top: 0.3rem;
 		right: 0;
-		padding: .5rem;
+		padding: 0.5rem;
 		font-size: $font-size-24;
 		color: currentColor;
 		background: none;
@@ -64,15 +64,15 @@
 		display: block;
 		width: 95%;
 		padding: 1rem;
-		margin-top: .5rem;
+		margin-top: 0.5rem;
 		margin-inline: auto;
 		font-size: $font-size-20;
 		color: $light-gray-e;
 		background-color: $main-cta;
 		border: none;
 		border-radius: 8px;
-		transition: background-color .3s;
-		&:hover{
+		transition: background-color 0.3s;
+		&:hover {
 			background-color: $dark-cta-1;
 		}
 	}
@@ -83,17 +83,17 @@
 	}
 	&__burger-icons {
 		transition: transform 0.3s;
-		left: .5rem;
+		left: 0.5rem;
 		z-index: 100;
 	}
 	&__account-icons {
-		right: .5rem;
+		right: 0.5rem;
 	}
 	&__bars,
 	&__arrow,
 	&__help,
 	&__user {
-		padding: .3rem;
+		padding: 0.3rem;
 		font-size: $font-size-24;
 		color: $light-gray-e;
 		background: none;
@@ -151,28 +151,36 @@
 			background-color: $dark-color-1;
 		}
 		&__list {
+			position: relative;
 			display: flex;
-			justify-content: space-evenly;
+			justify-content: space-between;
 			align-items: center;
-			padding: 0.5rem;
+			padding-block: 0.7rem;
+			max-width: 1300px;
+			margin-inline: auto;
 		}
-		&__item {
-			padding: .5rem 1rem;
+		&__item {		
+			padding: .5rem 1rem;		
+			font-size: $font-size-14;		
 		}
 		&__chevron {
 			position: relative;
 			padding: 0;
-			right: -.5rem;
-			top: .1rem;
+			right: -0.5rem;
+			top: 0.1rem;
 			font-size: $font-size-16;
 		}
 		&__desktop-btn {
-			padding: .6rem 1.2rem;
+			padding: 0.6rem 3.2rem;
 			font-size: $font-size-16;
 			color: $light-gray-e;
 			background-color: $main-cta;
 			border: none;
 			border-radius: 8px;
+			transition: background-color 0.3s;
+			&:hover {
+				background-color: $dark-cta-1;
+			}
 		}
 	}
 }
