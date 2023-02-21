@@ -1,0 +1,44 @@
+@use "./colors" as *;
+
+.sidebar-link-animation {
+	position: relative;
+	transition: color 0.3s, padding 0.3s;
+	z-index: 5;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 0;
+		background-color: $main-cta;
+		transition: width 0.3s;
+	}
+	&:hover {
+		font-weight: bold;
+		padding-left: 1rem;
+	}
+	&:hover::after {
+		width: 100%;
+		z-index: -1;
+	}
+}
+.navbar-link-animation {
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 3px;
+		width: 100%;
+		background-color: $light-cta-1;
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: transform 0.3s;
+	}
+	&:hover::after {
+		transform-origin: left;
+		transform: scaleX(1);
+	}
+}
