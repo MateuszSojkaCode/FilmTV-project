@@ -173,7 +173,7 @@
 			text-align: center;
 		}
 		&__link {
-			// padding-bottom: 0.5rem;
+			padding-bottom: 0.5rem;
 			width: 100%;
 			font-size: $font-size-14;
 			color: inherit;
@@ -197,7 +197,7 @@
 				background-color: $dark-cta-1;
 			}
 		}
-		&__container {
+		&__membership-container {
 			display: none;
 			position: absolute;
 			left: 0;

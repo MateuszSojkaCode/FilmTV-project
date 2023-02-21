@@ -6,10 +6,10 @@ const accountBox = document.querySelector('.nav__account-icons')
 const navHeading = document.querySelector('.nav__heading')
 
 const membershipList = document.querySelector('.nav__item--membership')
-const sidebarList = document.querySelector('.handle-sidebar')
+const sidebarList = document.querySelector('.show-sidebar')
 const chevronIcon = document.querySelector('.nav__chevron')
 
-const navContainer = document.querySelector('.nav__container')
+const membershipContainer = document.querySelector('.nav__membership-container')
 const navLink = document.querySelector('.show-membership')
 
 const overlay = document.querySelector('.overlay')
@@ -42,9 +42,7 @@ const showMembershipList = () => {
 }
 
 const showMembershipDesktop = () => {
-    navContainer.classList.toggle('show-membership')
-    console.log('hello');
-    
+    membershipContainer.classList.toggle('show-membership')   
 }
 
 barsIco.addEventListener('click', showNav)
