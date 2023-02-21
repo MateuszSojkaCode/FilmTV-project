@@ -6,8 +6,13 @@ const accountBox = document.querySelector('.nav__account-icons')
 const navHeading = document.querySelector('.nav__heading')
 
 const membershipList = document.querySelector('.nav__item--membership')
+const sidebarList = document.querySelector('.handle-sidebar')
 const chevronIcon = document.querySelector('.nav__chevron')
-const sidebarList = document.querySelector('.nav__item--list')
+
+const navContainer = document.querySelector('.nav__container')
+const navLink = document.querySelector('.show-membership')
+
+const overlay = document.querySelector('.overlay')
 
 const showNav = () => {
     barsIco.classList.toggle('hide')
@@ -18,9 +23,11 @@ const showNav = () => {
     if(navSidebar.classList.contains('move-sidebar')){
         accountBox.style.display = 'none'
         navHeading.style.display = 'none'
+        overlay.style.display = 'block'
     } else {
         accountBox.style.display = 'block'
         navHeading.style.display = 'block'
+        overlay.style.display = 'none'
     }     
 }
 
@@ -34,6 +41,14 @@ const showMembershipList = () => {
     }
 }
 
+const showMembershipDesktop = () => {
+    navContainer.classList.toggle('show-membership')
+    console.log('hello');
+    
+}
+
 barsIco.addEventListener('click', showNav)
 arrowIco.addEventListener('click', showNav)
 sidebarList.addEventListener('click', showMembershipList)
+navLink.addEventListener('click', showMembershipDesktop)
+
