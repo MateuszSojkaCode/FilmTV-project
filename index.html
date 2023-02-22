@@ -2,123 +2,210 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FilmTV</title>
-    <meta name="description" content="" />
-    <meta name="keyword" content="" />
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>FilmTV</title>
+	<meta name="description" content="" />
+	<meta name="keyword" content="" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
 
-    <script src="https://kit.fontawesome.com/8019d8951d.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/8019d8951d.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="./dist/css/main.min.css" />
+	<link rel="stylesheet" href="./dist/css/main.min.css" />
 </head>
 
 <body>
-    <nav class="nav">
+	<nav class="nav">
+		<!-- mobile navigation -->
 
-        <!-- mobile navigation -->
+		<div class="nav__mobile">
+			<div class="nav__burger-icons">
+				<button class="nav__bars">
+					<i class="fas fa-bars"></i>
+				</button>
+				<button class="nav__arrow hide">
+					<i class="fas fa-arrow-left"></i>
+				</button>
+			</div>
+			<div class="nav__sidebar">
+				<h2 class="nav__sidebar-heading">NowTV</h2>
+				<ul class="nav__list">
+					<li>
+						<a href="#" class="nav__item sidebar-link-animation">How NowTV works</a>
+					</li>
+					<li>
+						<a href="#" class="nav__item sidebar-link-animation">What's on</a>
+					</li>
+					<li>
+						<a href="#" class="nav__item sidebar-link-animation show-sidebar">TV Membership
+							<button class="nav__chevron">
+								<i class="fas fa-chevron-down"></i></button></a>
+						<ul class="nav__item--membership hide">
+							<li>
+								<a href="#" class="nav__item--membership-item sidebar-link-animation">Entertainment</a>
+							</li>
+							<li>
+								<a href="#" class="nav__item--membership-item sidebar-link-animation">Cinema</a>
+							</li>
+							<li>
+								<a href="#" class="nav__item--membership-item sidebar-link-animation">Sports</a>
+							</li>
+							<li>
+								<a href="#" class="nav__item--membership-item sidebar-link-animation">Kids</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="nav__item sidebar-link-animation">Broadband</a>
+					</li>
+					<li>
+						<a href="#" class="nav__item sidebar-link-animation">Sports</a>
+					</li>
+				</ul>
+				<button class="nav__sidebar-btn">Join NOW</button>
+			</div>
+			<h1 class="nav__heading">NowTV</h1>
+			<div class="nav__account-icons">
+				<button class="nav__help">
+					<i class="fas fa-question-circle"></i>
+				</button>
+				<button class="nav__user">
+					<i class="fas fa-user"></i>
+				</button>
+			</div>
+		</div>
+		<div class="overlay"></div>
 
-        <div class="nav__mobile">
-            <div class="nav__burger-icons">
-                <button class="nav__bars"><i class="fas fa-bars"></i></button>
-                <button class="nav__arrow hide"><i class="fas fa-arrow-left"></i></button>
-            </div>
-            <div class="nav__sidebar">
-                <h2 class="nav__sidebar-heading">NowTV</h2>
-                <ul class="nav__list">
-                    <li><a href="#" class="nav__item sidebar-link-animation">How NowTV works</a></li>
-                    <li><a href="#" class="nav__item sidebar-link-animation">What's on</a></li>
-                    <li><a href="#" class="nav__item sidebar-link-animation show-sidebar ">TV Membership <button class="nav__chevron"><i class="fas fa-chevron-down"></i></button></a>
-                        <ul class="nav__item--membership hide">
-                            <li><a href="#" class="nav__item--membership-item sidebar-link-animation">Entertainment</a></li>
-                            <li><a href="#" class="nav__item--membership-item sidebar-link-animation">Cinema</a></li>
-                            <li><a href="#" class="nav__item--membership-item sidebar-link-animation">Sports</a></li>
-                            <li><a href="#" class="nav__item--membership-item sidebar-link-animation">Kids</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="nav__item sidebar-link-animation">Broadband</a></li>
-                    <li><a href="#" class="nav__item sidebar-link-animation">Sports</a></li>
-                </ul>
-                <button class="nav__sidebar-btn">Join NOW</button>
-            </div>
-            <h1 class="nav__heading">NowTV</h1>
-            <div class="nav__account-icons">
-                <button class="nav__help"><i class="fas fa-question-circle"></i></button>
-                <button class="nav__user"><i class="fas fa-user"></i></button>
-            </div>
-        </div>
-        <div class="overlay"></div>        
+		<!-- desktop navigation -->
 
-        <!-- desktop navigation -->
+		<div class="nav__desktop">
+			<div class="nav__top-bar">
+				<h1 class="nav__heading">NowTV</h1>
+				<div class="nav__account-links">
+					<a href="#" class="nav__help nav__account-link">Help <i class="fas fa-chevron-down"></i></a>
+					<a href="#" class="nav__user nav__account-link">My Account <i class="fas fa-chevron-down"></i></a>
+				</div>
+			</div>
+			<div class="nav__bottom-bar">
+				<ul class="nav__list">
+					<li class="nav__list-item navbar-link-animation">
+						<a href="#" class="nav__link">How NowTV works</a>
+					</li>
+					<li class="nav__list-item navbar-link-animation">
+						<a href="#" class="nav__link">What's on</a>
+					</li>
+					<li class="nav__list-item">
+						<a href="#" class="nav__link navbar-link-animation show-membership pt-07">TV Membership
+							<button class="nav__chevron">
+								<i class="fas fa-chevron-down"></i></button></a>
+						<div class="nav__membership-container">
+							<ul class="nav__membership-list">
+								<li class="nav__membership-item">
+									<a href="#" class="nav__membership-link">
+										<div class="nav__card">
+											<h3 class="nav__card-heading">
+												Entertaiment
+											</h3>
+											<div class="nav__card-box">
+												entertaiment
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="nav__membership-item">
+									<a href="#" class="nav__membership-link">
+										<div class="nav__card">
+											<h3 class="nav__card-heading">
+												Cinema
+											</h3>
+											<div class="nav__card-box">
+												Cinema
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="nav__membership-item">
+									<a href="#" class="nav__membership-link">
+										<div class="nav__card">
+											<h3 class="nav__card-heading">
+												Sports
+											</h3>
+											<div class="nav__card-box">
+												Sports
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="nav__membership-item">
+									<a href="#" class="nav__membership-link">
+										<div class="nav__card">
+											<h3 class="nav__card-heading">
+												Kids
+											</h3>
+											<div class="nav__card-box">
+												kids
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<a href="#">
+								<p class="nav__membership-text">
+									Pick your experience
+								</p>
+							</a>
+						</div>
+					</li>
+					<li class="nav__list-item navbar-link-animation">
+						<a href="#" class="nav__link">Broadband</a>
+					</li>
+					<li class="nav__list-item navbar-link-animation">
+						<a href="#" class="nav__link">Sports</a>
+					</li>
+					<li class="nav__list-item">
+						<a href="#" class="nav__link"><button class="nav__desktop-btn">
+								Join NowTV
+							</button></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-        <div class="nav__desktop">
-            <div class="nav__top-bar">
-                <h1 class="nav__heading">NowTV</h1>
-                <div class="nav__account-links">
-                    <a href="#" class="nav__help nav__account-link">Help <i class="fas fa-chevron-down"></i></a>
-                    <a href="#" class="nav__user nav__account-link">My Account <i class="fas fa-chevron-down"></i></a>
-                </div>
-            </div>
-            <div class="nav__bottom-bar">
-                    <ul class="nav__list">
-                        <li class="nav__list-item navbar-link-animation"><a href="#" class="nav__link">How NowTV works</a></li>
-                        <li class="nav__list-item navbar-link-animation"><a href="#" class="nav__link">What's on</a></li>
-                        <li class="nav__list-item"><a href="#" class="nav__link navbar-link-animation show-membership pt-07">TV Membership <button class="nav__chevron"><i class="fas fa-chevron-down"></i></button></a>
-                            <div class="nav__membership-container">
-                                <ul class="nav__membership-list">
-                                    <li class="nav__membership-item">
-                                        <a href="#" class="nav__membership-link">
-                                            <div class="nav__card">
-                                                <h3 class="nav__card-heading">Entertaiment</h3>
-                                                <div class="nav__card-box">entertaiment</div>
-                                            </div>
-                                        </a>                                       
-                                    </li>
-                                    <li class="nav__membership-item">
-                                        <a href="#" class="nav__membership-link">
-                                            <div class="nav__card">
-                                                <h3 class="nav__card-heading">Cinema</h3>
-                                                <div class="nav__card-box">Cinema</div>
-                                            </div>
-                                        </a>                                        
-                                    </li>
-                                    <li class="nav__membership-item">
-                                        <a href="#" class="nav__membership-link">
-                                            <div class="nav__card">
-                                                <h3 class="nav__card-heading">Sports</h3>
-                                                <div class="nav__card-box">Sports</div>
-                                            </div>
-                                        </a>                                    
-                                    </li>
-                                    <li class="nav__membership-item">
-                                        <a href="#" class="nav__membership-link">
-                                            <div class="nav__card">
-                                                <h3 class="nav__card-heading">Kids</h3>
-                                                <div class="nav__card-box">kids</div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <a href="#"><p class="nav__membership-text">Pick your experience</p></a>
-                            </div>
-                        </li>
-                        <li class="nav__list-item navbar-link-animation"><a href="#" class="nav__link">Broadband</a></li>
-                        <li class="nav__list-item navbar-link-animation"><a href="#" class="nav__link">Sports</a></li>
-                        <li class="nav__list-item"><a href="#" class="nav__link"><button class="nav__desktop-btn">Join NowTV</button></a></li>
-                    </ul>
-            </div>
-        </div>
-    </nav>
+	<header class="header">
+		<div class="header__main">
+			<div class="header__img-box">
+				<div class="header__img header__img--left"></div>
+				<div class="header__img header__img--right"></div>
+				<div class="header__img header__img--desktop"></div>
+			</div>
+			<div class="header__bundle grid__header--bundle">
+				<div class="header__bundle-heading">entertainment & cinema bundle</div>
+				<div class="header__bundle-info">
+					<p class="header__bundle-text">Award-winning TV shows and bluckbuster movies</p>
+					<p class="header__bundle-text">£199.98 £12 a monst for 6 months. Cancel anytime</p>
+					<p class="header__bundle-text">Stream it all in Full HD on 3 devices at once with a Boost 7 day free trial.</p>
+				</div>
+				<div class="header__claim-offer">Claim offer</div>
+			</div>
 
+		</div>
+		<div class="header__membership-info">
+			<p class="header-info"></p>
+		</div>
+		<div class="header__terms">
+			New Entertainment, Cinema and Boost members. Thereafter
+			memberships auto-renew monthly at £9.99 for Cinema and £9.99 for
+			Entertainment. After your 7 day free trial, Boost auto-renews at
+			£5 a month (£6 a month from 28 February 2023). Cancel anytime.
+		</div>
+	</header>
 
-
-
-    <script src="./dist/js/main.min.js"></script>
+	<script src="./dist/js/main.min.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,39 @@
+@use '../abstracts/' as *;
+
+.header{position: relative;
+    // top: 61px;
+    &__img-box{
+        position: relative;
+        display: flex;
+    }
+    &__img{
+        height: 65vw;
+        width: 50%;
+        background-position: center;
+        background-size: cover;        
+        &--left{
+            background-image: url(./../../src/img/header1_mobile.jpg);
+        }   
+        &--right{
+            background-image: url(./../../src/img/header2_mobile.jpg);
+        }
+        &--desktop{
+            display: none;
+            background-image: url(./../../src/img/header.jpg);
+        }
+    }
+
+    @media(min-width: 48em){
+        // top: 120px;
+        &__img{
+            height: 60vh;
+            width: 100%;
+            &--left, &--right{
+                display: none;
+            }
+            &--desktop{
+                display: block;
+            }
+        }
+    }
+}

@@ -2,20 +2,20 @@
 @use "../base/" as *;
 
 .nav {
-	position: relative;
-	height: 4rem;
-	background-color: $main-color;
 	color: $light-gray-e;
 	&__desktop {
 		display: none;
 	}
 	&__mobile {
-		position: fixed;
+		// position: fixed;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 4rem;
 		width: 100%;
+		background-color: $main-color;
+	}
+	&__heading{
+		padding-block: 1rem;
 	}
 	&__sidebar {
 		position: fixed;
@@ -137,6 +137,9 @@
 		}
 		&__desktop {
 			display: block;
+			// position: fixed;
+			width: 100%;
+			background-color: $main-color;
 		}
 		&__heading {
 			font-size: $font-size-36;
