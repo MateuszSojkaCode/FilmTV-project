@@ -1,39 +1,164 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
-.header{position: relative;
-    // top: 61px;
-    &__img-box{
-        position: relative;
-        display: flex;
-    }
-    &__img{
-        height: 65vw;
-        width: 50%;
-        background-position: center;
-        background-size: cover;        
-        &--left{
-            background-image: url(./../../src/img/header1_mobile.jpg);
-        }   
-        &--right{
-            background-image: url(./../../src/img/header2_mobile.jpg);
-        }
-        &--desktop{
-            display: none;
-            background-image: url(./../../src/img/header.jpg);
-        }
+.header {
+	position: relative;
+	top: 64px;
+	&__img-box {
+		position: relative;
+		display: flex;
+	}
+	&__img {
+		height: 65vw;
+		width: 50%;
+		background-position: center;
+		background-size: cover;
+		&--left {
+			background-image: $transparent-gradient-0,
+				url(./../../src/img/header1_mobile.jpg);
+		}
+		&--right {
+			background-image: $transparent-gradient-0,
+				url(./../../src/img/header2_mobile.jpg);
+		}
+		&--desktop {
+			display: none;
+			background-position: top;
+			background-image: $transparent-gradient-0, url(./../../src/img/header.jpg);
+		}
+	}
+	&__bundle {
+        // padding-inline: 2rem;
+		background-color: $dark-color-2;
+		text-align: center;
+        
+
+		&-heading {
+			display: inline-block;
+			margin-block: 2rem;
+			padding: 0.4rem;
+			color: $dark-color-2;
+			text-transform: uppercase;
+			border-radius: 5px;
+			font-size: $font-size-14;
+			font-weight: bold;
+			background-color: $light-cta-2;
+			letter-spacing: 2px;
+		}
+		&-award {
+			padding-inline: 1rem;
+			font-size: $font-size-20;
+			line-height: 1.2;
+		}
+		&-price {
+			margin-block: 1rem;
+		}
+		&-old-price {
+			text-decoration: line-through;
+		}
+		&-new-price {
+			font-size: $font-size-32;
+		}
+		&-text {
+			padding-inline: 2rem;
+			color: $light-gray-b;
+			font-size: $font-size-14;
+		}
+		&-claim-offer {
+			display: inline-block;
+			width: 100%;
+			max-width: 20rem;
+			margin-block: 1rem;
+			padding-block: 1rem;
+			background-color: $main-cta;
+			border-radius: 10px;
+            transition: background-color .3s;
+            &:hover{
+                background-color: $dark-cta-1;
+            }
+		}
+	}
+
+	&__membership-info {        
+		padding: 1rem 2rem;
+		text-align: center;
+		font-size: $font-size-12;
+		color: $light-gray-b;
+		background-image: $dark-gradien-180;
+	}
+    &__membership-text{
+        line-height: 1.4;
     }
 
-    @media(min-width: 48em){
-        // top: 120px;
-        &__img{
-            height: 60vh;
-            width: 100%;
-            &--left, &--right{
-                display: none;
+	&__terms {
+		padding-block: 1rem;
+		text-align: center;
+		font-size: $font-size-14;
+		background-color: $dark-color-2;
+		&-text {
+			cursor: pointer;
+			color: $light-gray-b;
+			padding: 1rem;
+		}
+		&-info {
+			display: none;
+			font-size: $font-size-12;
+			color: $light-gray-b;
+			line-height: 1.4;
+			padding: 0.5rem 1.5rem;
+		}
+	}
+	@media (min-width: 48em) {
+		top: 120px;
+		&__img {
+            min-height: 600px;
+			height: 50vh;
+			width: 100%;
+			&--left,
+			&--right {
+				display: none;
+			}
+			&--desktop {
+				display: block;
+			}
+		}
+		&__bundle{
+            position: absolute;
+            top: 22rem;
+            background: none;
+            width: 100%; 
+            &-heading{
+                margin: .5rem;
+                padding-inline: 2rem;
             }
-            &--desktop{
-                display: block;
+            &-award{
+                font-size: $font-size-36;
+                padding-inline: 2rem;
+            }
+            &-price{
+                margin: .5rem;
+            }
+            &-old-price{
+                font-size: $font-size-32;
+            }
+            &-new-price{
+                font-size: $font-size-36;
+            }
+            &-price{
+                font-size: $font-size-24;
+            }
+            &-text{
+                font-size: $font-size-16;
             }
         }
-    }
+        &__membership-info{
+            padding-block: 1.5rem;
+        }
+        &__terms-info{
+            margin-inline: auto;
+            max-width: 1200px;
+        }
+	}
+}
+.show-terms {
+	display: block;
 }
