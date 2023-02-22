@@ -2,6 +2,7 @@
 
 .header{position: relative;
     // top: 61px;
+    z-index: -1;
     &__img-box{
         position: relative;
         display: flex;
@@ -12,17 +13,90 @@
         background-position: center;
         background-size: cover;        
         &--left{
-            background-image: url(./../../src/img/header1_mobile.jpg);
+            background-image: $transparent-gradient-0, url(./../../src/img/header1_mobile.jpg);
         }   
         &--right{
-            background-image: url(./../../src/img/header2_mobile.jpg);
+            background-image: $transparent-gradient-0, url(./../../src/img/header2_mobile.jpg);
         }
         &--desktop{
             display: none;
             background-image: url(./../../src/img/header.jpg);
         }
+        
+    }
+    &__bundle{
+        background-color: $dark-color-2;
+        text-align: center;       
+
+        &-heading{
+            display: inline-block;
+            margin-block: 2rem;
+            padding: 0.4rem;
+            color: $dark-color-2;
+            text-transform: uppercase;
+            border-radius: 5px;
+            font-size: $font-size-14;
+            font-weight: bold;
+            background-color: $light-cta-2;
+            letter-spacing: 2px;
+
+        }
+        &-award{
+            padding-inline: 3rem;          
+            font-size: $font-size-20;
+            line-height: 1.2;
+        }
+        &-price{
+            margin-block: 1rem;          
+        }
+        &-old-price{
+            text-decoration: line-through;
+        }
+        &-new-price{
+            font-size: $font-size-32;
+        }
+        &-text{
+            padding-inline: 2rem;
+            color: $light-gray-b;
+            font-size: $font-size-14;
+        }
+        &-claim-offer{
+            display: inline-block;
+            width: 90%;
+            margin-block: 1rem;
+            padding-block: 1rem;
+            background-color: $main-cta;
+            border-radius: 10px;
+        }
+        } 
+
+   
+    &__membership-info{
+        padding: 0 1.6rem 1rem;
+        text-align: center;
+        font-size: $font-size-12;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        color: $light-gray-b;
+        background-image: $dark-gradien-180;
     }
 
+    &__terms{
+        padding-block: 1.5rem 3rem;
+        text-align: center;
+        font-size: $font-size-14;
+        background-color: $dark-color-2;
+        &-text{
+            color: $light-gray-b;
+        }
+        &-info{
+            display: none;
+            font-size: $font-size-12;
+            color: $light-gray-b;
+            line-height: 1.4;
+            padding: 1.5rem;
+        }
+    }
     @media(min-width: 48em){
         // top: 120px;
         &__img{
@@ -36,4 +110,7 @@
             }
         }
     }
+}
+.show-terms{
+    display: block;
 }

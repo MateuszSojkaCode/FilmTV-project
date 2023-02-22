@@ -12,6 +12,9 @@ const chevronIcon = document.querySelector('.nav__chevron')
 const membershipContainer = document.querySelector('.nav__membership-container')
 const navLink = document.querySelector('.show-membership')
 
+const terms = document.querySelector('.header__terms-info')
+const termsIcon = document.querySelector('.terms-chevron')
+
 const overlay = document.querySelector('.overlay')
 
 const showNav = () => {
@@ -45,8 +48,12 @@ const showMembershipDesktop = () => {
     membershipContainer.classList.toggle('show-membership')   
 }
 
+const showTerms = () => {
+    terms.classList.toggle('show-terms')
+}
+
 barsIco.addEventListener('click', showNav)
 arrowIco.addEventListener('click', showNav)
 sidebarList.addEventListener('click', showMembershipList)
 navLink.addEventListener('click', showMembershipDesktop)
-
+termsIcon.addEventListener('click', showTerms)

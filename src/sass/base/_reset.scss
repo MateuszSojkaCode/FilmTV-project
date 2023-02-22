@@ -1,3 +1,5 @@
+@use '../abstracts/' as *;
+
 *,
 *::after,
 *::before {
@@ -10,9 +12,9 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Helvetica', sans-serif;
 	background-color: cadetblue;
-	// position: relative;
+	color: $white-color;
 }
 button {
 	border: none;

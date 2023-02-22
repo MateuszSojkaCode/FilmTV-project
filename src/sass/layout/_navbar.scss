@@ -3,11 +3,13 @@
 
 .nav {
 	color: $light-gray-e;
+
 	&__desktop {
 		display: none;
 	}
 	&__mobile {
 		// position: fixed;
+		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -115,9 +117,9 @@
 .move-sidebar {
 	transform: translateX(0);
 }
-.move-icons {
-	transform: translateX(80vw);
-}
+// .move-icons {
+// 	transform: translateX(80vw);
+// }
 
 @media (min-width: 25em) {
 	.nav {
@@ -137,7 +139,7 @@
 		}
 		&__desktop {
 			display: block;
-			// position: fixed;
+			position: fixed;
 			width: 100%;
 			background-color: $main-color;
 		}
