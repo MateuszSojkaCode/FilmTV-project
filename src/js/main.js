@@ -13,7 +13,7 @@ const membershipContainer = document.querySelector('.nav__membership-container')
 const navLink = document.querySelector('.show-membership')
 
 const terms = document.querySelector('.header__terms-info')
-const termsIcon = document.querySelector('.terms-chevron')
+const termsText = document.querySelector('.header__terms-text')
 
 const overlay = document.querySelector('.overlay')
 
@@ -45,7 +45,13 @@ const showMembershipList = () => {
 }
 
 const showMembershipDesktop = () => {
-    membershipContainer.classList.toggle('show-membership')   
+    membershipContainer.classList.toggle('show-membership')
+    
+    // if(membershipContainer.classList.contains('show-membership')){
+    //     overlay.style.display = 'block'
+    // } else {
+    //     overlay.style.display = 'none'
+    // }
 }
 
 const showTerms = () => {
@@ -56,4 +62,4 @@ barsIco.addEventListener('click', showNav)
 arrowIco.addEventListener('click', showNav)
 sidebarList.addEventListener('click', showMembershipList)
 navLink.addEventListener('click', showMembershipDesktop)
-termsIcon.addEventListener('click', showTerms)
+termsText.addEventListener('click', showTerms)
