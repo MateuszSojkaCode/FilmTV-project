@@ -2,7 +2,7 @@
 
 .header {
 	position: relative;
-	top: 64px;
+	// top: 64px;
 	&__img-box {
 		position: relative;
 		display: flex;
@@ -103,7 +103,7 @@
 		}
 	}
 	@media (min-width: 48em) {
-		top: 120px;
+		// top: 120px;
 		&__img {          
 			&--left,
 			&--right {
