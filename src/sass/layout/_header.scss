@@ -20,11 +20,6 @@
 			background-image: $transparent-gradient-0,
 				url(./../../src/img/header2_mobile.jpg);
 		}
-		&--desktop {
-			display: none;
-			background-position: top;
-			background-image: $transparent-gradient-0, url(./../../src/img/header.jpg);
-		}
 	}
 	&__bundle {
         // padding-inline: 2rem;
@@ -109,23 +104,22 @@
 	}
 	@media (min-width: 48em) {
 		top: 120px;
-		&__img {
-            min-height: 600px;
-			height: 50vh;
-			width: 100%;
+		&__img {          
 			&--left,
 			&--right {
 				display: none;
 			}
-			&--desktop {
-				display: block;
-			}
+			
 		}
 		&__bundle{
-            position: absolute;
-            top: 22rem;
-            background: none;
-            width: 100%; 
+			background-image: url(../../../src/img/header.jpg);
+			background-position: center;
+			background-size: cover;
+			min-height: 600px;
+            display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: center;
             &-heading{
                 margin: .5rem;
                 padding-inline: 2rem;
@@ -149,6 +143,9 @@
             &-text{
                 font-size: $font-size-16;
             }
+			&-claim-offer{
+				margin-bottom: 2rem;
+			}
         }
         &__membership-info{
             padding-block: 1.5rem;
