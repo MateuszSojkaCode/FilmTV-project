@@ -1,4 +1,4 @@
-.container {
+.wrapper {
 	margin-inline: auto;
 	width: 100%;
 	&__1600 {
@@ -9,5 +9,8 @@
 	}
 	&__1200 {
 		max-width: 1200px;
+	}
+	&__1000 {
+		max-width: 1000px;	
 	}
 }
