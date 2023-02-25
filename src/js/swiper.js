@@ -15,12 +15,16 @@ const swiper = new Swiper(".mySwiper", {
 	keyboard: true,
 	breakpoints: {
 		576: {
-			slidesPerView: 3.5,
-			slidesPerGroup: 3,
-		},
-		768: {
 			slidesPerView: 4.5,
 			slidesPerGroup: 4,
+		},
+		768: {
+			slidesPerView: 5.5,
+			slidesPerGroup: 5,
+		},
+		992: {
+			slidesPerView: 6.5,
+			slidesPerGroup: 6,
 		},
 	},
 });
