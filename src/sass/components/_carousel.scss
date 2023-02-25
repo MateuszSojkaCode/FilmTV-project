@@ -1,9 +1,9 @@
 @use '../abstracts/' as *;
 
 .swiper {
-  padding-block: 1rem;
-  width: 80%;
-  height: 20rem;
+  padding: 1rem;
+  width: 100%;
+  height: auto;
   right: 0;
 }
 
@@ -21,7 +21,7 @@
   object-fit: cover;
   border-radius: 10px;
 }
-.entertainment__swiper-box{
+.entertainment__swiper-box, .cinema__swiper-box, .sport__swiper-box{
   position: relative;
   height: 20rem;
   padding-bottom: 1rem;
@@ -29,10 +29,10 @@
 @media(min-width: 48em){
   .swiper{
     position: absolute;
-    bottom: 2rem;
+    bottom: 0rem;
     
   }
-  .entertainment__swiper-box{
+  .entertainment__swiper-box, .cinema__swiper-box, .sport__swiper-box{
     height: 15rem;
   }
 }
