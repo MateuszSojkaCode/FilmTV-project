@@ -61,7 +61,7 @@
             align-items: flex-start;
             height: 55vh;
             background-image: $transparent-gradient-45, url(../../../src/img/entertaiment.jpg);
-            background-position-y: -100px;
+            background-position: right;
             background-size: cover;
         }
         &__text{
