@@ -1,7 +1,7 @@
 @use '../abstracts/' as *;
 
 .swiper {
-  padding: 1rem;
+  padding: 2rem;
   width: 100%;
   height: auto;
   right: 0;
@@ -30,9 +30,24 @@
   .swiper{
     position: absolute;
     bottom: 0rem;
+    &__sport{
+      top: -4rem;
+    }
     
   }
   .entertainment__swiper-box, .cinema__swiper-box, .sport__swiper-box{
     height: 15rem;
+  }
+}
+.swiper-button-next, .swiper-button-prev{
+  top: 45%;
+  background-color: $main-cta;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 5px solid $main-color;
+  &::after{
+    color: $white-color;
+    font-size: $font-size-16;
   }
 }
