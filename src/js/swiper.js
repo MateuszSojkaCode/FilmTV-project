@@ -2,7 +2,7 @@ const swiper = new Swiper(".mySwiper", {
 	slidesPerView: 2.5,
 	slidesPerGroup: 2,
 	spaceBetween: 20,
-	loop: true,
+	// loop: true,
 	pagination: {
 		el: ".swiper-pagination",
 		clickable: true,
@@ -34,7 +34,7 @@ const swiperSport = new Swiper(".mySwiper__sport", {
 	slidesPerView: 1.5,
 	slidesPerGroup: 1,
 	spaceBetween: 20,
-	loop: true,
+	// loop: true,
 	pagination: {
 		el: ".swiper-pagination",
 		clickable: true,
