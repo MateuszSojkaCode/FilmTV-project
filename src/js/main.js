@@ -15,7 +15,10 @@ const navLink = document.querySelector('.show-membership')
 const terms = document.querySelector('.header__terms-info')
 const termsText = document.querySelector('.header__terms-text')
 
+
 const overlay = document.querySelector('.overlay')
+
+
 
 const showNav = () => {
     barsIco.classList.toggle('hide')
@@ -58,8 +61,11 @@ const showTerms = () => {
     terms.classList.toggle('show-terms')
 }
 
+
+
 barsIco.addEventListener('click', showNav)
 arrowIco.addEventListener('click', showNav)
 sidebarList.addEventListener('click', showMembershipList)
 navLink.addEventListener('click', showMembershipDesktop)
 termsText.addEventListener('click', showTerms)
+
