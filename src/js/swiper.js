@@ -11,8 +11,8 @@ const swiper = new Swiper(".mySwiper", {
 		nextEl: ".swiper-button-next",
 		prevEl: ".swiper-button-prev",
 	},
-	mousewheel: true,
-	keyboard: true,
+	// mousewheel: true,
+	// keyboard: true,
 	breakpoints: {
 		576: {
 			slidesPerView: 4.5,
@@ -43,8 +43,8 @@ const swiperSport = new Swiper(".mySwiper__sport", {
 		nextEl: ".swiper-button-next",
 		prevEl: ".swiper-button-prev",
 	},
-	mousewheel: true,
-	keyboard: true,
+	// mousewheel: true,
+	// keyboard: true,
 	breakpoints: {
 		576: {
 			slidesPerView: 2.5,

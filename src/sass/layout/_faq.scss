@@ -1,7 +1,7 @@
 @use '../abstracts/' as *;
 
 .faq{
-    padding-bottom: 2rem;
+    padding-block: 2rem;
     background-color: $dark-color-2;
     &__heading{
         margin-bottom: 2rem;
@@ -22,6 +22,11 @@
     &__answer{
         display: none;
     }
+    &__button-chevron{
+        font-size: $font-size-16;
+        color: $white-color;
+        background: none;
+    }
     @media(min-width: 48em){
         &__card-box{
             display: flex;
@@ -33,4 +38,8 @@
             width: 48%;
         }
     }
+}
+
+.show-answer{
+    display: block;
 }
