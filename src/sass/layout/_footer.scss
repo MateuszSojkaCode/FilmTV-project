@@ -1,0 +1,28 @@
+@use '../abstracts/' as *;
+
+.footer{
+    background-color: $dark-color-2;
+    &__social-list{
+        display: flex;
+        justify-content: center;
+        font-size: $font-size-32;
+        padding-block: 1rem;
+    }
+    &__social-item{
+        padding-inline: 1rem;
+    }
+    &__social-link, &__links-link{
+        color: $light-gray-b;
+    }
+    &__links-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-block: 1rem;
+    }
+    &__links-item{
+        padding: .5rem;
+        font-size: $font-size-12;
+    }
+
+}
